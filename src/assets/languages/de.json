@@ -1,6 +1,9 @@
 {
   "Menu": {
     "DASHBOARD": "Instrumententafel",
+    "SCHOOL_ADMINISTRATION" : "School Administration",
+    "SCHOOL_ALL" : "All Schools",
+    "SCHOOL_ON_BOARD" : "OnBoard School",
     "MAIL": "Mail",
     "INBOX": "Posteingang",
     "COMPOSE_MAIL": "E-Mail schreiben",

@@ -19,6 +19,28 @@
     </li>
     <li ng-class="{'open active':$state.includes('mail')}">
       <a href="javascript:;">
+        <span class="nav-text">{{ 'Menu.SCHOOL_ADMINISTRATION' | translate }}</span>
+        <i class="fa fa-envelope-o"><span class="badge bg-red">4</span></i>
+      </a>
+      <ul>
+        <li ui-sref-active="active">
+          <a ui-sref="school.list">
+            <span class="nav-text">{{ 'Menu.SCHOOL_ALL' | translate }}</span>
+            <i>{{ 'Menu.SCHOOL_ALL' | translate | limitTo: 2}}</i>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li ui-sref-active="active">
+          <a ui-sref="school.onboard">
+            <span class="nav-text">{{ 'Menu.SCHOOL_ON_BOARD' | translate }}</span>
+            <i>{{ 'Menu.SCHOOL_ON_BOARD' | translate | limitTo: 2}}</i>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li ng-class="{'open active':$state.includes('mail')}">
+      <a href="javascript:;">
         <span class="nav-text">{{ 'Menu.MAIL' | translate }}</span>
         <i class="fa fa-envelope-o"><span class="badge bg-red">4</span></i>
       </a>

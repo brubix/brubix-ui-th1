@@ -1,6 +1,9 @@
 {
   "Menu": {
     "DASHBOARD": "Nástěnka",
+    "SCHOOL_ADMINISTRATION" : "School Administration",
+    "SCHOOL_ALL" : "All Schools",
+    "SCHOOL_ON_BOARD" : "OnBoard School",
     "MAIL": "Maily",
     "INBOX": "Schránka",
     "COMPOSE_MAIL": "Napsat Mail",

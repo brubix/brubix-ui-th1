@@ -224,6 +224,7 @@
         url: '/app/shop',
         template: '<div ui-view></div>'
       })
+
       //orders
       .state('shop.orders', {
         url: '/orders',
@@ -232,6 +233,26 @@
         controllerAs: 'ctrl',
         parent: 'shop'
       })
+      .state('school', {
+            url: '/app/school',
+            template: '<div ui-view></div>'
+        })
+      //school-list
+      .state('school.list', {
+            url: '/list',
+            templateUrl: 'app/pages/school-list/school-list.html',
+            controller: 'SchoolListController',
+            controllerAs: 'ctrl',
+            parent: 'school'
+        })
+      //school-onboard
+        .state('school.onboard', {
+            url: '/onboard',
+            templateUrl: 'app/pages/school-onboard-wizard/school-onboard.html',
+            controller: 'SchoolOnBoardWizardController',
+            controllerAs: 'ctrl',
+            parent: 'school'
+        })
       //single-order
       .state('shop.single-order', {
         url: '/single-order',
