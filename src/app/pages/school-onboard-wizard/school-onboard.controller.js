@@ -3,20 +3,39 @@
 
   angular
     .module('minotaur')
-    .controller('SchoolOnBoardWizardController', SchoolOnBoardWizardController);
+    .controller('SchoolOnBoardWizardController', SchoolOnBoardWizardController)
+  ;
 
   /** @ngInject */
   function SchoolOnBoardWizardController($log, $resource, $scope) {
     var vm = $scope;
     vm.activeStep = 0;
     vm.user = {};
-    $resource('http://www.filltext.com/?rows=1&pretty=true&name={firstName}&userName={firstName}&password=[%22password%22]&repeatPassword=[%22password%22]&aboutYou={lorem|100}&address={addressObject}&phoneNumber={phone|format}&emailId={email}&faceBookURL=[%22http://facebook.com%22]&acceptTermCondition=[true]&sendNewsLetter=[true]').query().$promise.then(function(kyc) {
-        vm.kyc = kyc[0];
+    $resource('/app/pages/school-onboard-wizard/onboard.json').get().$promise.then(function(onboard) {
+        vm.onboard = onboard;
     });
 
     vm.submit = function(){
       $log.log(vm.user);
     }
   }
+
+    function UiSelectController() {
+        var vm = this;
+
+        vm.itemArray = [
+            {id: 1, name: 'first'},
+            {id: 2, name: 'second'},
+            {id: 3, name: 'third'},
+            {id: 4, name: 'fourth'},
+            {id: 5, name: 'fifth'}
+        ];
+
+        vm.selected = { value: vm.itemArray[0] };
+
+        vm.availableColors = ['Red','Green','Blue','Yellow','Magenta','Maroon','Umbra','Turquoise'];
+        vm.multipleDemo = {};
+        vm.multipleDemo.colors = ['Blue','Red'];
+    }
 
 })();

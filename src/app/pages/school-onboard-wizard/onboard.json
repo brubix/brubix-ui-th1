@@ -1,0 +1,78 @@
+{
+  "entityInformation": {
+    "name": "Jacquie",
+    "userName": "jacq",
+    "password": "password",
+    "confirmPassword": "password",
+    "aboutSchool": "morbi at eget suspendisse sapien eros sed etiam neque ipsum magna sed mattis pharetra magna tempor ipsum curabitur vestibulum tortor at adipiscing vitae malesuada aliquam morbi sed lacus placerat tempor sed ac rutrum pretium ipsum at magna convallis dolor dolor id sed et amet mi eget quis tellus amet amet elit ipsum lacus lectus tincidunt lacus lacus non sed consectetur malesuada vitae eget magna porta rutrum vestibulum vitae magna tellus vitae massa pulvinar non ac vestibulum lorem porttitor amet elit libero eget pulvinar aenean porttitor vel mattis aenean donec lacus mattis pretium mattis velit egestas ac vestibulum lacus massa et"
+  },
+  "address": {
+    "line1": "Owners Court East",
+    "line2": "Kasavanhalli Road",
+
+    "country": [
+      {"id" : 1, "name" : "India"},
+      {"id" : 2, "name" : "Bangladesh"}
+    ],
+
+    "selectedCountry" : { "value": {"id" : 1, "name" : "India"}},
+
+    "city": [
+      {"id" : 1, "name" : "Bangalore"},
+      {"id" : 2, "name" : "Mysore"}
+    ],
+    "selectedCity" : { "value": {"id" : 1, "name" : "Bangalore"}},
+
+    "state": [
+      {"id" : 1, "name" : "Karnataka"},
+      {"id" : 2, "name" : "Andra Pradesh"}
+    ],
+
+    "selectedState" : { "value": {"id" : 1, "name" : "Karnataka"}},
+
+    "pin": 560035
+  },
+  "contactInformation": {
+    "emailId": "sanjeev.blr@gmail.com",
+    "phoneNumber": "9902144000",
+    "socialURL": {
+      "faceBook": "http://facebook.com/sanjeev.blr",
+      "twitter": "http://twitter.com/sanjeev.blr",
+      "gPlus": "http://googleplus.com/sanjeev.blr",
+      "linkedIn": "http://linkedin.com/sanjeev.blr"
+    }
+  },
+  "KYS": {
+    "schoolType": [
+      {"id" : 1, "name" : "Play"},
+      {"id" : 2, "name" : "Primary"},
+      {"id" : 3, "name" : "Middle"},
+      {"id" : 4, "name" : "Secondary"},
+      {"id" : 5, "name" : "Senior Secondary"},
+      {"id" : 6, "name" : "College"},
+      {"id" : 7, "name" : "University"},
+      {"id" : 8, "name" : "Satellite Institue"}
+    ],
+
+    "selectedSchoolType" : {"id" : 1, "name" : "Play"},
+
+    "schoolBoard": [
+      {"id" : 1, "name" : "CBSE"},
+      {"id" : 2, "name" : "ICSE"},
+      {"id" : 3, "name" : "IGCSE"},
+      {"id" : 4, "name" : "UNIV"}
+    ],
+    "selectedSchoolBoard" : {"id" : 1, "name" : "CBSE"},
+
+    "schoolLanguage": [ "English","Hindi","Tamil","Telugu"],
+    "selectedSchoolLanguage" : ["English"]
+
+  },
+  "documents": [
+    {
+      "type": "agreement",
+      "name": "Agreement with DPS",
+      "fileName": "aggrement.pdf"
+    }
+  ]
+}
