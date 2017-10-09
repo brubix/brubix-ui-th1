@@ -4,10 +4,11 @@
   angular
     .module('minotaur')
     .controller('SchoolOnBoardWizardController', SchoolOnBoardWizardController)
+    .controller('ModalsInstanceController', ModalsInstanceController)
   ;
 
   /** @ngInject */
-  function SchoolOnBoardWizardController($log, $resource, $scope) {
+  function SchoolOnBoardWizardController($log, $resource, $scope, $uibModal, $http) {
     var vm = $scope;
     vm.activeStep = 0;
     vm.user = {};
@@ -16,26 +17,66 @@
     });
 
     vm.submit = function(){
-      $log.log(vm.user);
+        var responsePromise = $http.get("www.google.co.in");
+
+        responsePromise.success(function(data, status, headers, config) {
+            $scope.open();
+        });
+        responsePromise.error(function(data, status, headers, config) {
+            alert("AJAX failed!");
+        });
+
+        $log.log(vm.user);
     }
+
+
+
+      vm.items = ['item1', 'item2', 'item3'];
+
+      vm.animationsEnabled = true;
+
+      vm.open = function (size) {
+
+          var modalInstance = $uibModal.open({
+              animation: vm.animationsEnabled,
+              templateUrl: 'modalContent.html',
+              controller: 'ModalInstanceController',
+              controllerAs: 'modal',
+              size: size,
+              resolve: {
+                  items: function () {
+                      return vm.items;
+                  }
+              }
+          });
+
+          modalInstance.result.then(function (selectedItem) {
+              vm.selected = selectedItem;
+          }, function () {
+              $log.info('Modal dismissed at: ' + new Date());
+          });
+      };
+
+      vm.toggleAnimation = function () {
+          vm.animationsEnabled = !vm.animationsEnabled;
+      };
   }
 
-    function UiSelectController() {
+    function ModalsInstanceController($uibModalInstance, items) {
         var vm = this;
 
-        vm.itemArray = [
-            {id: 1, name: 'first'},
-            {id: 2, name: 'second'},
-            {id: 3, name: 'third'},
-            {id: 4, name: 'fourth'},
-            {id: 5, name: 'fifth'}
-        ];
+        vm.items = items;
+        vm.selected = {
+            item: vm.items[0]
+        };
 
-        vm.selected = { value: vm.itemArray[0] };
+        vm.ok = function () {
+            $uibModalInstance.close(vm.selected.item);
+        };
 
-        vm.availableColors = ['Red','Green','Blue','Yellow','Magenta','Maroon','Umbra','Turquoise'];
-        vm.multipleDemo = {};
-        vm.multipleDemo.colors = ['Blue','Red'];
+        vm.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
+        };
+
     }
-
 })();

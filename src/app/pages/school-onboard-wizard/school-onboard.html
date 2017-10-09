@@ -327,9 +327,26 @@
                     <input type="checkbox" name="newsletter" id="newsletter" ng-model="kyc.sendNewsLetter">
                     <div class="input-indicator"></div>
                   </label>
+                  <!-- tile body -->
+                  <section class="tile-body">
+                    <script type="text/ng-template" id="modalContent.html">
+                      <div class="modal-header">
+                        <h3 class="modal-title">I'm a modal!</h3>
+                      </div>
+                      <div class="modal-body">
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-success btn-ef btn-ef-3 btn-ef-3c" ng-click="modal.ok()"><i class="fa fa-arrow-right"></i> Submit</button>
+                        <button class="btn btn-lightred btn-ef btn-ef-4 btn-ef-4c" ng-click="modal.cancel()"><i class="fa fa-arrow-left"></i> Cancel</button>
+                      </div>
+                    </script>
+
+                    <button type="button" class="btn btn-theme btn-sm minotaur-btn" ng-click="open()">Open me!</button>
+                  </section>
 
                   <button class="btn btn-default minotaur-btn" ng-click="forms.activeStep = 3">Previous</button>
-                  <button ng-disabled="uploadDocuments.$invalid" class="btn btn-success minotaur-btn pull-right" ng-click="forms.submit()">Create Account</button>
+                  <button ng-disabled="uploadDocuments.$invalid" class="btn btn-success minotaur-btn pull-right" ng-click="submit()">Create Account</button>
 
                 </ng-form>
 
