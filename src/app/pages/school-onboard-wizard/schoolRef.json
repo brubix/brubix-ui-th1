@@ -1,0 +1,64 @@
+{
+  "affiliations": [
+    {
+      "affiliation": "CBSE",
+      "description": "Central Board of Secondary Education"
+    },
+    {
+      "affiliation": "ICSE",
+      "description": "International Counsil of Secondary Education"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "description": "English"
+    },
+    {
+      "language": "Hindi",
+      "description": "Hindi"
+    },
+    {
+      "language": "Tamil",
+      "description": "Tamil"
+    },
+    {
+      "language": "Telugu",
+      "description": "Telugu"
+    }
+  ],
+  "institutionTypes": [
+    {
+      "type": "Play",
+      "description": "Play School"
+    },
+    {
+      "type": "Primary",
+      "description": "Primary School"
+    },
+    {
+      "type": "Middle",
+      "description": "Middle School"
+    },
+    {
+      "type": "Secondary",
+      "description": "Secondary School"
+    },
+    {
+      "type": "Senior Secondary",
+      "description": "Senior Secondary School"
+    },
+    {
+      "type": "College",
+      "description": "College"
+    },
+    {
+      "type": "University",
+      "description": "University"
+    },
+    {
+      "type": "Satellite Institutes",
+      "description": "Satellite Institutes"
+    }
+  ]
+}

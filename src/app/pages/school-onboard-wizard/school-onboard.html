@@ -118,12 +118,12 @@
                   <div class="row">
                     <div class="form-group col-md-4">
                       <label for="country_select" class="control-label minotaur-label" >Country</label>
-                      <ui-select ng-model="onboard.address.selectedCountry" id="country_select">
+                      <ui-select ng-model="onboard.address.selectedCountry" id="country_select" on-select="populateState(onboard.address.selectedCountry)">
                         <ui-select-match>
-                          <span ng-bind="$select.selected.name"></span>
+                          <span ng-bind="$select.selected.description"></span>
                         </ui-select-match>
-                        <ui-select-choices repeat="item in (onboard.address.country | filter: $select.search) track by item.id">
-                          <span ng-bind="item.name"></span>
+                        <ui-select-choices repeat="item in (countries | filter: $select.search) track by item.code">
+                          <span ng-bind="item.description"></span>
                         </ui-select-choices>
                       </ui-select>
                     </div>
@@ -132,10 +132,10 @@
                       <label for="state_select" class="control-label minotaur-label" >State</label>
                       <ui-select ng-model="onboard.address.selectedState" id="state_select">
                         <ui-select-match>
-                          <span ng-bind="$select.selected.name"></span>
+                          <span ng-bind="$select.selected.description"></span>
                         </ui-select-match>
-                        <ui-select-choices repeat="item in (onboard.address.state | filter: $select.search) track by item.id">
-                          <span ng-bind="item.name"></span>
+                        <ui-select-choices repeat="item in (states | filter: $select.search) track by item.code">
+                          <span ng-bind="item.description"></span>
                         </ui-select-choices>
                       </ui-select>
                     </div>
@@ -153,7 +153,7 @@
                     </div>
 
                     <div class="form-group col-md-4">
-                      <label for="pin" class="control-label minotaur-label">Zip <span class="text-red">*</span>: </label>
+                      <label for="pin" class="control-label minotaur-label">PIN/ZIP <span class="text-red">*</span>: </label>
                       <input type="text" name="pin" id="pin" class="form-control" ng-model="kyc.address.zip" placeholder="Enter pin">
                       <div ng-messages="address.pin.$error" ng-if="address.pin.$dirty" role="alert" class="help-block text-red">
                         <div ng-messages-include="app/components/templates/messages_tmpl.html"></div>
@@ -252,10 +252,10 @@
                       <label for="school_type_select" class="control-label minotaur-label" >School Type</label>
                       <ui-select ng-model="onboard.KYS.selectedSchoolType" id="school_type_select">
                         <ui-select-match>
-                          <span ng-bind="$select.selected.name"></span>
+                          <span ng-bind="$select.selected.type"></span>
                         </ui-select-match>
-                        <ui-select-choices repeat="item in (onboard.KYS.schoolType | filter: $select.search) track by item.id">
-                          <span ng-bind="item.name"></span>
+                        <ui-select-choices repeat="item in (schoolRef.institutionTypes | filter: $select.search) track by item.type">
+                          <span ng-bind="item.description"></span>
                         </ui-select-choices>
                       </ui-select>
                     </div>
@@ -264,10 +264,10 @@
                       <label for="school_board_select" class="control-label minotaur-label" >School Board</label>
                       <ui-select ng-model="onboard.KYS.selectedSchoolBoard" id="school_board_select">
                         <ui-select-match>
-                          <span ng-bind="$select.selected.name"></span>
+                          <span ng-bind="$select.selected.affiliation"></span>
                         </ui-select-match>
-                        <ui-select-choices repeat="item in (onboard.KYS.schoolBoard | filter: $select.search) track by item.id">
-                          <span ng-bind="item.name"></span>
+                        <ui-select-choices repeat="item in (schoolRef.affiliations | filter: $select.search) track by item.affiliation">
+                          <span ng-bind="item.description"></span>
                         </ui-select-choices>
                       </ui-select>
                     </div>
@@ -283,9 +283,9 @@
                       </ui-select>-->
 
                       <ui-select multiple ng-model="onboard.KYS.selectedSchoolLanguage" close-on-select="false" id="school_launguage_select">
-                        <ui-select-match placeholder="Select Languages...">{{$item}}</ui-select-match>
-                        <ui-select-choices repeat="language in onboard.KYS.schoolLanguage | filter:$select.search">
-                          {{language}}
+                        <ui-select-match placeholder="Select Languages...">{{$item.language}}</ui-select-match>
+                        <ui-select-choices repeat="language in schoolRef.languages | filter:$select.search">
+                          {{language.language}}
                         </ui-select-choices>
                       </ui-select>
                     </div>

@@ -1,0 +1,40 @@
+[
+  {
+    "code": "IND",
+    "description": "India",
+    "currency": "INR",
+    "states": [
+      {
+        "code": "KAR",
+        "description": "Karnataka"
+      },
+      {
+        "code": "AP",
+        "description": "Andra Pradesh"
+      },
+      {
+        "code": "TEL",
+        "description": "Telangana"
+      },
+      {
+        "code": "TN",
+        "description": "TamilNadu"
+      }
+    ]
+  },
+  {
+    "code": "USA",
+    "description": "United States of Ame",
+    "currency": "USA",
+    "states": [
+      {
+        "code": "TXS",
+        "description": "Texas"
+      },
+      {
+        "code": "WDC",
+        "description": "Wasington DC"
+      }
+    ]
+  }
+]
