@@ -58,15 +58,12 @@
             $log.log(vm.states);
         };
         vm.submit = function () {
-            var responsePromise = $http.get("www.google.co.in");
+            var school = $resource('http://localhost:8080/v1/schools', {});
+            var newSchool = new school(vm.onboard);
+            newSchool.$save(function(school){
+                $log.log(school);
 
-            responsePromise.success(function (data, status, headers, config) {
-                $scope.open();
             });
-            responsePromise.error(function (data, status, headers, config) {
-                alert("AJAX failed!");
-            });
-
             $log.log(vm.user);
         }
 

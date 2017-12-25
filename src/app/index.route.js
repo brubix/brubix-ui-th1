@@ -253,6 +253,13 @@
             controllerAs: 'ctrl',
             parent: 'school'
         })
+      .state('school.new', {
+          url: '/add',
+          templateUrl: 'app/pages/add-school/add-school.html',
+          controller: 'AddSchoolController',
+          controllerAs: 'ctrl',
+          parent: 'school'
+      })
       //single-order
       .state('shop.single-order', {
         url: '/single-order',

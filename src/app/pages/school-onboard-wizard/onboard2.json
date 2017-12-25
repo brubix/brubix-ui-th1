@@ -1,0 +1,41 @@
+{
+  "schoolInfo": {
+    "name": "Ryan school",
+    "address": {
+      "firstLine": "firstLine",
+      "secondLine": "secondLine",
+      "thirdLine": "thirdLine",
+      "city": "country",
+      "state": "state",
+      "country": "country",
+      "pin": "pin"
+    },
+    "kys": {
+      "type": "schoolType",
+      "board": "schoolBoard",
+      "language": "schoolLanguage",
+      "otherKysInfo": "otherKysInfo"
+    },
+    "about": "about"
+  },
+  "adminInfos": [
+    {
+      "firstName": "firstLine",
+      "lastName": "lastName",
+      "phone": "phone",
+      "email": "email"
+    },
+    {
+      "firstName": "firstLine",
+      "lastName": "lastName",
+      "phone": "phone",
+      "email": "email"
+    }
+  ],
+  "social": {
+    "facebook": "facebook",
+    "googlePlus": "googlePlus",
+    "twitter": "twitter",
+    "linkedIn": "linkedIn"
+  }
+}

@@ -10,23 +10,9 @@
     "line1": "Owners Court East",
     "line2": "Kasavanhalli Road",
 
-    "country": [
-      {"id" : 1, "name" : "India"},
-      {"id" : 2, "name" : "Bangladesh"}
-    ],
-
     "selectedCountry" : { "value": {"id" : 1, "name" : "India"}},
 
-    "city": [
-      {"id" : 1, "name" : "Bangalore"},
-      {"id" : 2, "name" : "Mysore"}
-    ],
     "selectedCity" : { "value": {"id" : 1, "name" : "Bangalore"}},
-
-    "state": [
-      {"id" : 1, "name" : "Karnataka"},
-      {"id" : 2, "name" : "Andra Pradesh"}
-    ],
 
     "selectedState" : { "value": {"id" : 1, "name" : "Karnataka"}},
 
@@ -43,36 +29,11 @@
     }
   },
   "KYS": {
-    "schoolType": [
-      {"id" : 1, "name" : "Play"},
-      {"id" : 2, "name" : "Primary"},
-      {"id" : 3, "name" : "Middle"},
-      {"id" : 4, "name" : "Secondary"},
-      {"id" : 5, "name" : "Senior Secondary"},
-      {"id" : 6, "name" : "College"},
-      {"id" : 7, "name" : "University"},
-      {"id" : 8, "name" : "Satellite Institue"}
-    ],
-
     "selectedSchoolType" : {"id" : 1, "name" : "Play"},
 
-    "schoolBoard": [
-      {"id" : 1, "name" : "CBSE"},
-      {"id" : 2, "name" : "ICSE"},
-      {"id" : 3, "name" : "IGCSE"},
-      {"id" : 4, "name" : "UNIV"}
-    ],
     "selectedSchoolBoard" : {"id" : 1, "name" : "CBSE"},
 
-    "schoolLanguage": [ "English","Hindi","Tamil","Telugu"],
     "selectedSchoolLanguage" : ["English"]
 
-  },
-  "documents": [
-    {
-      "type": "agreement",
-      "name": "Agreement with DPS",
-      "fileName": "aggrement.pdf"
-    }
-  ]
+  }
 }
