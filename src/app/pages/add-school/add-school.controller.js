@@ -3,13 +3,13 @@
 
   angular
     .module('minotaur')
-    .controller('_FormsCommonController', _FormsCommonController)
+    .controller('AddSchoolController', AddSchoolController)
     .controller('_SlidersController', _SlidersController)
     .controller('_UiSelectController', _UiSelectController)
     .controller('_TagsInputController', _TagsInputController);
 
   /** @ngInject */
-  function _FormsCommonController() {
+  function AddSchoolController() {
     var vm = this;
     vm.htmlVariable = '<h2>Try me!</h2><p>textAngular is a super cool WYSIWYG Text Editor directive for AngularJS</p><p><b>Features:</b></p><ol><li>Automatic Seamless Two-Way-Binding</li><li class="text-red">Super Easy <b>Theming</b> Options</li><li>Simple Editor Instance Creation</li><li>Safely Parses Html for Custom Toolbar Icons</li><li>Doesn&apos;t Use an iFrame</li><li>Works with Firefox, Chrome, and IE8+</li></ol><p><b>Code at GitHub:</b> <a href="https://github.com/fraywing/textAngular">Here</a> </p>';
   }
